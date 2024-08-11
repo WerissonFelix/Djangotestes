@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 from decouple import config, Csv
 from dj_database_url import parse as db_url
@@ -119,7 +120,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+# CONFIGURANDO O DJANGO PARA ELE RETORNAR ARQUIVOS ESTÁTICOS
+STATIC_URL = "/assets/"  # não faz muita diferença, é apenas a url
+STARIC_ROOT = os.path.join(
+    BASE_DIR, "staticfiles"
+)  # Local onde o django vai colocar todos os static files
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, "static")
+]  # Configura onde eu quero colocar os meus arquivos estáticos
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
