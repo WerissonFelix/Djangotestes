@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> lista de tarefas </h1>
+    <ul>
+        {% for todo in todo_list %}
+            <li>{{  todo.title }}</li>
+            <li> {{ todo.created_at }}</li>
+            <li> {{ todo.deadline }}</li>
+        {% endfor %}
+
+        <form mothod="POST">
+            <button type="submit"> <a href="{% url "todo_create" %}"> adicionar infomações</a></button>
+        </form>
+    </ul>
+</body>
+</html>
