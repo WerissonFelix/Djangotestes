@@ -21,8 +21,12 @@ from todos.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", TodoListView.as_view(), name = 'listar'),
-    path("create", TodoCreateView.as_view(), name= 'adicionar'),
-    path("update/<int:pk>", TodoUpdateView.as_view(), name='atualizar'),
-    path("delete/<int:pk>", TodoDeleteView.as_view(), name='deletar'),
+    path("", TodoListView.as_view(), name = 'listarEmpresas'),
+    path("create", TodoCreateView.as_view(), name= 'adicionarEmpresas'),
+    path("update/<int:pk>", TodoUpdateView.as_view(), name='atualizarEmpresas'),
+    path("delete/<int:pk>", TodoDeleteView.as_view(), name='deletarEmpresas'),
+    path("jogoListar", Selctjogo.as_view(), name = 'listarJogo'),
+    path("jogoAdicionar", InsertJogos.as_view(), name = 'adicionarJogo'),
+    path("updatejogo/<int:pk>", UpdateJogo.as_view(), name= 'atualizarJogo'),
+    path("deletejogo/<int:pk>", DeleteJogo.as_view(), name='deletarJogo'),
 ]

@@ -15,13 +15,13 @@
 <body>
    
   <h1> Excluir tarefa?  </h1>
-  <p> Tem certeza que quer Excluir os dados do id: {{ empresas.id }}? </p>
+  <p> Tem certeza que quer Excluir os dados do id: {{ jogo.id }}? </p>
   <form method="POST">
     {% csrf_token %}
     {{ form }}
 
     <button type="submit">Excluir</button>
   </form>
-  <button> <a href=" {% url 'listarEmpresas' %}"> Cancelar </a></button>
+  <button> <a href=" {% url 'listarJogo' %}"> Cancelar </a></button>
 </body>
 </html>

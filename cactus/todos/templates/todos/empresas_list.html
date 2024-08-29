@@ -24,11 +24,11 @@
         <li> jogo:{{ empresa.jogo }} </li>
         <li> logo:{{ empresa.logo }} </li>
         <li> desc:{{ empresa.desc }} </li>
-        <button> <a href=" {% url 'atualizar' pk=empresa.pk %}"> atualizar </a></button>
-        <button> <a href=" {% url 'deletar' pk=empresa.pk %}"> deletar </a></button>
+        <button> <a href=" {% url 'atualizarEmpresas' pk=empresa.pk %}"> atualizar </a></button>
+        <button> <a href=" {% url 'deletarEmpresas' pk=empresa.pk %}"> deletar </a></button>
       {% endfor %}
   </ul>
 
-  <button> <a href=" {% url 'adicionar' %}"> adicionar </a></button>
+  <button> <a href=" {% url 'adicionarEmpresas' %}"> adicionar </a></button>
 </body>
 </html>

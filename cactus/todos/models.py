@@ -17,7 +17,7 @@ class jogo(models.Model):
     nome = models.CharField(max_length=64, unique=True)
     preco = models.DecimalField(max_digits=4, decimal_places=2)
     desc = models.CharField(max_length=100)
-    foto = models.ImageField()
+    foto = models.ImageField(blank=True, null=True) # dexei blank true para testar mais rápido, mudar dps
     data_lancamento = models.DateField(blank=True, null=True)
 
 class usuario(models.Model):
