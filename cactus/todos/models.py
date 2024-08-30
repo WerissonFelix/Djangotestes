@@ -25,7 +25,7 @@ class usuario(models.Model):
     nome = models.CharField(max_length=30)
     email = models.EmailField(unique=True)
     senha = models.CharField(max_length=20)
-    foto =  models.ImageField()
+    foto =  models.ImageField(blank=True, null=True) # mesma coisa do foto de jogo arrumar amanhã
 
 class biblioteca(models.Model):
     id = models.AutoField(auto_created=True, primary_key=True)

@@ -39,3 +39,44 @@ class UpdateJogo(UpdateView):
 class DeleteJogo(DeleteView):
     model = jogo
     success_url = reverse_lazy("listarJogo")
+
+# ------ CRUD DE USUÁRIO -------
+
+class SelctUsuario(ListView):
+    model = usuario
+
+class InsertUsuario(CreateView):
+    model = usuario
+    fields = ["id", "nome", "email", "senha", "foto"]
+    success_url = reverse_lazy("listarUser")
+
+
+class UpdateUsuario(UpdateView):
+    model = usuario
+    fields = ["id", "nome", "email", "senha", "foto"]
+    success_url = reverse_lazy("listarUser")
+
+class DeleteUsuario(DeleteView):
+    model = usuario
+    success_url = reverse_lazy("listarUser")
+
+# -------- CRUD PARA BIBLIOTECA ---- 
+
+
+class SelctBiblioteca(ListView):
+    model = biblioteca
+
+class InsertBiblioteca(CreateView):
+    model = biblioteca
+    fields = ["id", "id_jogo", "id_user"]
+    success_url = reverse_lazy("listarBiblio")
+
+
+class UpdateBiblioteca(UpdateView):
+    model = biblioteca
+    fields = ["id", "id_jogo", "id_user"]
+    success_url = reverse_lazy("listarBiblio")
+
+class DeleteBiblioteca(DeleteView):
+    model = biblioteca
+    success_url = reverse_lazy("listarBiblio")

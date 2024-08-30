@@ -29,4 +29,12 @@ urlpatterns = [
     path("jogoAdicionar", InsertJogos.as_view(), name = 'adicionarJogo'),
     path("updatejogo/<int:pk>", UpdateJogo.as_view(), name= 'atualizarJogo'),
     path("deletejogo/<int:pk>", DeleteJogo.as_view(), name='deletarJogo'),
+    path("userListar", SelctUsuario.as_view(), name = 'listarUser'),
+    path("userAdicionar", InsertUsuario.as_view(), name='adicionarUser'),
+    path("updateUser/<int:pk>", UpdateUsuario.as_view(), name='atualizarUser'),
+    path("deleteUser/<int:pk>", DeleteUsuario.as_view(), name='deletarUser'),
+    path("biblioListar", SelctBiblioteca.as_view(), name = 'listarBiblio'),
+    path("biblioAdicionar", InsertBiblioteca.as_view(), name = 'adicionarBiblio'),
+    path("updateBiblio/<int:pk>", UpdateBiblioteca.as_view(), name='atualizarBiblio'),
+    path("deleteBiblio/<int:pk>", DeleteBiblioteca.as_view(), name='deletarBiblio'),
 ]
