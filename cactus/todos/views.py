@@ -1,21 +1,26 @@
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from todos.models import *
+from django.shortcuts import render
 
+def home(request):
+    return render(
+        request,
+        "todos/home.html",
+    )
 # CRUD PARA A EMPRESA
 
 class TodoListView(ListView):
     model = Empresas
-
 class TodoCreateView(CreateView):
     model = Empresas
     fields = ["id","nome","email", "senha", "jogo", "logo", "desc"]
-    success_url = reverse_lazy("listarEmpresas")
+    success_url = reverse_lazy("PaginaInicial")
 
 class TodoUpdateView(UpdateView):
     model = Empresas
     fields = ["id","nome","email", "senha", "jogo", "logo", "desc"]
-    success_url = reverse_lazy("listarEmpresas")
+    success_url = reverse_lazy("PaginaInicial")
 
 class TodoDeleteView(DeleteView):
     model = Empresas
@@ -44,6 +49,7 @@ class DeleteJogo(DeleteView):
 
 class SelctUsuario(ListView):
     model = usuario
+    
 
 class InsertUsuario(CreateView):
     model = usuario

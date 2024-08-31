@@ -8,7 +8,7 @@ class Empresas(models.Model):
     email = models.EmailField()
     senha = models.CharField(max_length=20)
     jogo = models.CharField(max_length=30, blank=True, null=True)
-    logo = models.ImageField(blank=True, null= True)
+    logo = models.ImageField(upload_to='imagemEmpresa')
     desc = models.CharField(max_length=30)
 
 class jogo(models.Model):

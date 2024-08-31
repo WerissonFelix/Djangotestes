@@ -12,20 +12,23 @@
 </head>
 
 <body>
-  <h1> Adicionar User <h1>
-
-    {% if usuario.pk %}
-    <h1> Editar tarefa </h1>
-
-    {% else %}
-        <h1> Nova tarefa </h1>
-    {% endif %}
-    <form method="POST">
-    {% csrf_token %}
-    {{ form }}
-
-    <button type="submit">Inserir valores</button>
-    </form>
-    
+    <div class="mamaeui">
+        <div class="imagemlegal">
+            <img src="{% static "imagens/cactuslogo-removebg-preview.png" %}">
+        </div>
+        <div class="cadastrobox">
+          <form method="POST">
+              {% csrf_token %}
+              {{ form }}
+              <input type="submit" value="cadastro">
+          </form>
+          <div class="cadastrin">
+              <a href="lolxd.html">
+                  <p>c tem cadastro</p>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
