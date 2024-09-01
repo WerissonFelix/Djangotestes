@@ -24,7 +24,7 @@ from todos.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name='PaginaInicial'),
-    path("", TodoListView.as_view(), name = 'listarEmpresas'),
+    path("empresaListar/", TodoListView.as_view(), name = 'listarEmpresas'),
     path("create", TodoCreateView.as_view(), name= 'adicionarEmpresas'),
     path("update/<int:pk>", TodoUpdateView.as_view(), name='atualizarEmpresas'),
     path("delete/<int:pk>", TodoDeleteView.as_view(), name='deletarEmpresas'),
@@ -39,8 +39,8 @@ urlpatterns = [
     path("biblioListar", SelctBiblioteca.as_view(), name = 'listarBiblio'),
     path("biblioAdicionar", InsertBiblioteca.as_view(), name = 'adicionarBiblio'),
     path("updateBiblio/<int:pk>", UpdateBiblioteca.as_view(), name='atualizarBiblio'),
-    path("deleteBiblio/<int:pk>", DeleteBiblioteca.as_view(), name='deletarBiblio'),
+    path("deleteBiblio/<int:pk>", DeleteBiblioteca.as_view(), name='deletarBiblio'),  
 ]
 
-
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

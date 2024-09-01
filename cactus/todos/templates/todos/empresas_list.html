@@ -23,8 +23,8 @@
         <li> email:{{ empresa.email }} </li>
         <li> senha:{{ empresa.senha }} </li>
         <li> jogo:{{ empresa.jogo }} </li>
-        <li> logo: {{ empresa.logo }}</li>
-        <li> desc:{{ empresa.desc }} </li>
+        <img src="{{ empresa.logo.url }}" alt="{{ empresa.nome }}">
+        <li> desc: {{ empresa.desc }} </li>
         <button> <a href=" {% url 'atualizarEmpresas' pk=empresa.pk %}"> atualizar </a></button>
         <button> <a href=" {% url 'deletarEmpresas' pk=empresa.pk %}"> deletar </a></button>
       {% endfor %}

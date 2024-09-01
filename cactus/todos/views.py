@@ -12,6 +12,7 @@ def home(request):
 
 class TodoListView(ListView):
     model = Empresas
+    
 class TodoCreateView(CreateView):
     model = Empresas
     fields = ["id","nome","email", "senha", "jogo", "logo", "desc"]

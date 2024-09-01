@@ -17,7 +17,7 @@ class jogo(models.Model):
     nome = models.CharField(max_length=64, unique=True)
     preco = models.DecimalField(max_digits=4, decimal_places=2)
     desc = models.CharField(max_length=100)
-    foto = models.ImageField(blank=True, null=True) # dexei blank true para testar mais rápido, mudar dps
+    foto = models.ImageField(upload_to='imagemJogo') # dexei blank true para testar mais rápido, mudar dps
     data_lancamento = models.DateField(blank=True, null=True)
 
 class usuario(models.Model):
@@ -25,7 +25,7 @@ class usuario(models.Model):
     nome = models.CharField(max_length=30)
     email = models.EmailField(unique=True)
     senha = models.CharField(max_length=20)
-    foto =  models.ImageField(blank=True, null=True) # mesma coisa do foto de jogo arrumar amanhã
+    foto =  models.ImageField(upload_to='imagemUser') # mesma coisa do foto de jogo arrumar amanhã
 
 class biblioteca(models.Model):
     id = models.AutoField(auto_created=True, primary_key=True)

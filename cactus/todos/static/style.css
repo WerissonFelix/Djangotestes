@@ -8,7 +8,7 @@ body{
     color: white;
 }
 
- 
+
 input{
     background-color: #313435;
     border-radius: 5px 5px 5px 5px;
@@ -46,7 +46,7 @@ input[type=submit]{
 .cadastrobox{
     border: solid;
     border-radius: 5px 5px 5px 5px;
-    border-color: rgb(165, 144, 168);
+    border-color: rgb(139, 139, 139);
     height: 57vh;
     width: 26vw;
     align-content: center;
